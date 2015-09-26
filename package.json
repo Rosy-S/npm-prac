@@ -1,0 +1,14 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "a practice app for how-to-node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@linclark/pkg": "^1.0.2"
+  }
+}
