@@ -1,6 +1,6 @@
 {
   "name": "practice",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "a practice app for how-to-node",
   "main": "index.js",
   "scripts": {
