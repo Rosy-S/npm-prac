@@ -3,22 +3,20 @@
 //of characters received from the server & the second line should contain the complete String of characters sent by the server.
 var fs = require('fs');
 var http = require('http');
+var concat = require('concat-stream');
+var concatStream = concat(piping);
 var lst = process.argv;
 var url = lst[2];
-var results = "";
 http.get(url, function(response){
 	response.setEncoding("utf8");
-	response.pipe(function (err, data){
-		if (err){
-			return console.log(err);
-		}
-		else{
-			console.log(data.length);
-			console.log(data); 
-		}
+	response.pipe(concatStream)
 });
 
-});
+function piping (data){
+	console.log(data.length);
+	console.log(data); 
+}
+
 
 // .on("data", function (data){
 // 	results = results + data;
